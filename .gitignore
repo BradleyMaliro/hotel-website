@@ -1,0 +1,10 @@
+# Secrets: never upload these
+.env
+.env.*
+*.pem
+*.key
+
+# Dependencies and system junk
+node_modules/
+.DS_Store
+Thumbs.db
