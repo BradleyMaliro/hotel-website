@@ -1,0 +1,207 @@
+/* ===== 1. COLOURS & SETTINGS ===== */
+:root {
+  --navy: #0B1F3A;
+  --charcoal: #2B2F36;
+  --brass: #B08D57;
+  --cream: #F7F1E6;
+  --white: #FFFFFF;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Nunito Sans', sans-serif;
+
+  --radius: 12px;
+}
+
+/* ===== 2. RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== 3. BASE STYLES ===== */
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+/* ===== 4. BUTTON ===== */
+.btn {
+  display: inline-block;
+  background-color: var(--brass);
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--navy);
+}
+/* ===== 5. LAYOUT HELPER ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== 6. HEADER / NAVIGATION ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--navy);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--brass);
+  color: var(--white);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+/* Menu links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--brass);
+}
+
+/* On the navy bar, the button should turn white on hover instead of navy */
+.site-header .btn {
+  padding: 12px 28px;
+  font-size: 13px;
+}
+
+.site-header .btn:hover {
+  background-color: var(--white);
+  color: var(--navy);
+}/* ===== 7. MOBILE MENU ===== */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: var(--white);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Turns the three lines into an X when open */
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Everything inside this block only applies on screens 900px wide or smaller */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar .btn {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: var(--navy);
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 24px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
