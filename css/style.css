@@ -371,3 +371,153 @@ h1, h2, h3 {
   padding-top: 60px;
   padding-bottom: 130px;
 }
+/* ===== 10. SECTIONS (shared) ===== */
+.section {
+  padding: 90px 0;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.section-head h2 {
+  font-size: clamp(34px, 5vw, 52px);
+}
+
+.section-head p {
+  max-width: 320px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(43, 47, 54, 0.6);
+}
+
+/* ===== 11. SERVICES CARDS ===== */
+.services {
+  background-color: var(--white);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  position: relative;
+  display: block;
+  height: 460px;
+  overflow: hidden;
+  border-radius: 24px;
+  background-color: var(--navy);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover,
+.service-card:focus-visible {
+  transform: translateY(-8px);
+}
+
+.service-card:focus-visible {
+  outline: 3px solid var(--brass);
+  outline-offset: 4px;
+}
+
+.service-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.08);
+}
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 31, 58, 0.92) 0%, rgba(11, 31, 58, 0.25) 55%, transparent 100%);
+}
+
+.service-text {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+  color: var(--white);
+}
+
+.service-text h3 {
+  color: var(--white);
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.service-text p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 16px;
+}
+
+.service-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--brass);
+  color: var(--white);
+  font-size: 18px;
+}
+
+/* Only hide the text until hover on devices that can really hover (mouse).
+   Phones and tablets can't hover, so they always see the text. */
+@media (hover: hover) and (pointer: fine) {
+  .service-text p {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .service-card:hover .service-text p,
+  .service-card:focus-visible .service-text p {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablets: 2 columns */
+@media (max-width: 1000px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phones: 1 column */
+@media (max-width: 600px) {
+  .section {
+    padding: 64px 0;
+  }
+
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    height: 380px;
+  }
+}
