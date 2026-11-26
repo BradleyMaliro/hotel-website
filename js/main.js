@@ -27,3 +27,55 @@ filterButtons.forEach((button) => {
     });
   });
 });
+
+// ===== DINING MENU TABS =====
+const menuTabs = document.querySelectorAll('.menu-tab');
+const menuPanels = document.querySelectorAll('.menu-panel');
+
+menuTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.menu;
+
+    menuTabs.forEach((t) => {
+      const isActive = t === tab;
+      t.classList.toggle('active', isActive);
+      t.setAttribute('aria-pressed', isActive);
+    });
+
+    menuPanels.forEach((panel) => {
+      panel.hidden = panel.dataset.menu !== target;
+    });
+  });
+});
+
+// ===== RESERVATION FORM =====
+const reserveForm = document.querySelector('#reserve-form');
+
+if (reserveForm) {
+  const dateInput = reserveForm.querySelector('#res-date');
+  const message = reserveForm.querySelector('.form-message');
+
+  // Stop people picking a date in the past
+  const now = new Date();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  dateInput.min = `${now.getFullYear()}-${month}-${day}`;
+
+  reserveForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    // Spam trap: bots fill hidden fields, people don't
+    if (reserveForm.elements.website.value !== '') {
+      return;
+    }
+
+    if (!reserveForm.checkValidity()) {
+      reserveForm.reportValidity();
+      return;
+    }
+
+    // textContent is safe: it shows text, never runs it as HTML
+    message.textContent = 'Thank you! This is a demo, so nothing was sent.';
+    reserveForm.reset();
+  });
+}

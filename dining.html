@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dining | Kilele Grand Hotel, Nairobi</title>
+  <meta name="description" content="Restaurant, bar and room service at Kilele Grand Hotel in Nairobi, with Kenyan favourites and international dishes. Reserve a table online.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===== HEADER / NAVIGATION ===== -->
+  <header class="site-header">
+    <nav class="navbar container">
+
+      <a href="index.html" class="logo">
+        <span class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+          </svg>
+        </span>
+        <span class="logo-text">Kilele Grand</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="dining.html" class="active">Dining</a></li>
+        <li><a href="conference.html">Conference</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <a href="contact.html" class="btn">Book Now</a>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="page-banner">
+      <div class="container">
+        <h1>Dining</h1>
+        <p>Kenyan flavours and international favourites, from sunrise breakfast to late-night drinks.</p>
+      </div>
+    </section>
+
+    <!-- ===== INTRO + VENUES ===== -->
+    <section class="section">
+      <div class="container">
+
+        <div class="intro-text">
+          <span class="eyebrow">Eat &amp; Drink</span>
+          <h2>A Table for Every <em>Occasion</em></h2>
+          <p>Our kitchen mixes proudly Kenyan ingredients with global technique. Whether it is a business lunch, a family dinner or a quiet drink, there is a place for you.</p>
+        </div>
+
+        <div class="rooms-grid">
+
+          <article class="room-card">
+            <div class="room-image">
+              <img src="images/restaurant.webp" alt="The Kilele Grand restaurant with set tables" width="800" height="600" loading="lazy">
+              <span class="room-badge">Restaurant</span>
+            </div>
+            <div class="room-body">
+              <h3>The Peak Restaurant</h3>
+              <p>All-day dining with a grill, a buffet breakfast and a dinner menu that changes with the season.</p>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <div class="room-image">
+              <img src="images/bar.webp" alt="The bar and lounge with warm lighting" width="800" height="600" loading="lazy">
+              <span class="room-badge">Bar &amp; Lounge</span>
+            </div>
+            <div class="room-body">
+              <h3>Summit Bar &amp; Lounge</h3>
+              <p>Signature cocktails, Kenyan coffee and light bites in a relaxed, warm setting.</p>
+            </div>
+          </article>
+
+          <article class="room-card">
+            <div class="room-image">
+              <img src="images/room-service.webp" alt="A room service tray with a meal" width="800" height="600" loading="lazy">
+              <span class="room-badge">Room Service</span>
+            </div>
+            <div class="room-body">
+              <h3>In-Room Dining</h3>
+              <p>Our full menu delivered to your door, 24 hours a day.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MENU ===== -->
+    <section class="section menu-section" style="background-color: var(--white);">
+      <div class="container">
+
+        <div class="intro-text">
+          <span class="eyebrow">Sample Menu</span>
+          <h2>Taste of <em>Kilele</em></h2>
+        </div>
+
+        <div class="menu-tabs" role="group" aria-label="Choose a menu">
+          <button type="button" class="menu-tab active" data-menu="breakfast" aria-pressed="true">Breakfast</button>
+          <button type="button" class="menu-tab" data-menu="lunch" aria-pressed="false">Lunch</button>
+          <button type="button" class="menu-tab" data-menu="dinner" aria-pressed="false">Dinner</button>
+          <button type="button" class="menu-tab" data-menu="drinks" aria-pressed="false">Drinks</button>
+        </div>
+
+        <div class="menu-panel" data-menu="breakfast">
+          <ul class="menu-list">
+            <li>
+              <div class="menu-item-head"><h3>Mandazi &amp; Spiced Chai</h3><span class="menu-price">KES 650</span></div>
+              <p>Freshly fried coconut mandazi served with hot masala tea.</p>
+            </li>
+            <li>
+              <div class="menu-item-head"><h3>Full Kenyan Breakfast</h3><span class="menu-price">KES 1,450</span></div>
+              <p>Eggs your way, sausage, beans, arrowroot, grilled tomato and toast.</p>
+            </li>
+            <li>
+              <div class="menu-item-head"><h3>Mahamri &amp; Coconut Beans</h3><span class="menu-price">KES 950</span></div>
+              <p>Cardamom-scented mahamri with beans slow-cooked in coconut milk.</p>
+            </li>
+            <li>
+              <div class="menu-item-head"><h3>Tropical Fruit Plate</h3><span class="menu-price">KES 800</span></div>
+              <p>Seasonal mango, pineapple, papaya and passion fruit with yoghurt.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-panel" data-menu="lunch" hidden>
+          <ul class="menu-list">
+            <li>
+              <div class="menu-item-head"><h3>Nyama Choma Platter</h3><span class="menu-price">KES 2,400</span></div>
+              <p>Charcoal-grilled goat or beef with kachumbari, ugali and roast potatoes.</p>
+            </li>
+            <li>
+              <div class="menu-item-head"><h3>Pilau with Kachumbari</h3><span class="menu-price">KES 1,500</span></div>
+              <p>Fragrant spiced rice with tender beef and fresh tomato-onion salad.</p>
+            </li>
+            <li>
+              <div class="menu-item-head"><h3>Tilapia Fry &amp; Ugali</h3><span class="menu-price">KES 1,900</span></div>
+              <p>Whole fried tilapia with sukuma wiki and ugali.</p>
+            </li>
+            <li>
+              <div class="menu-item-head"><h3>Kilele Club Sandwich</h3><span class="menu-price">KES 1,350</span></div>
+              <p>Grilled chicken, bacon, egg and avocado with fries.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-panel" data-menu="dinner" hidden>
+          <ul class="menu-list">
+            <li>
+              <div class="menu-item-head"><h3>Braised Lamb Shank</h3><span class="menu-price">KES 3,200</span></div>
+              <p>Slow-cooked lamb with rosemary jus, mashed potato and seasonal greens.</p>
+            </li>
+            <li>
+              <div class="menu-item-head"><h3>Grilled Lake Victoria Perch</h3><span class="menu-price">KES 2,800</span></div>
+              <p>Perch fillet with coconut rice and a lemon-herb butter.</p>
+            </li>
+            <li>
+              <div class="menu-item-head"><h3>Beef Fillet</h3><span class="menu-price">KES 3,600</span></div>
+              <p>Grilled to order with peppercorn sauce and roasted vegetables.</p>
+            </li>
+            <li>
+              <div class="menu-item-head"><h3>Coconut Vegetable Curry</h3><span class="menu-price">KES 1,900</span></div>
+              <p>A rich vegetarian curry with chapati or steamed rice.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-panel" data-menu="drinks" hidden>
+          <ul class="menu-list">
+            <li>
+              <div class="menu-item-head"><h3>Dawa Cocktail</h3><span class="menu-price">KES 1,200</span></div>
+              <p>Vodka, honey, lime and crushed ice in the classic Nairobi style.</p>
+            </li>
+            <li>
+              <div class="menu-item-head"><h3>Kenyan Filter Coffee</h3><span class="menu-price">KES 450</span></div>
+              <p>Single-origin beans from the slopes of Mount Kenya.</p>
+            </li>
+            <li>
+              <div class="menu-item-head"><h3>Fresh Passion Juice</h3><span class="menu-price">KES 500</span></div>
+              <p>Pressed to order, with no added sugar.</p>
+            </li>
+            <li>
+              <div class="menu-item-head"><h3>Masala Chai</h3><span class="menu-price">KES 400</span></div>
+              <p>Black tea simmered with milk, ginger and cardamom.</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== HOURS + RESERVATION ===== -->
+    <section class="section">
+      <div class="container reserve-layout">
+
+        <div class="hours-card">
+          <span class="eyebrow">Opening Hours</span>
+          <h2>When to Join Us</h2>
+          <ul>
+            <li><span>Breakfast</span><span>6:30am - 10:30am</span></li>
+            <li><span>Lunch</span><span>12:00pm - 3:00pm</span></li>
+            <li><span>Dinner</span><span>6:30pm - 10:30pm</span></li>
+            <li><span>Bar &amp; Lounge</span><span>11:00am - 12:00am</span></li>
+            <li><span>Room Service</span><span>24 hours</span></li>
+          </ul>
+        </div>
+
+        <div class="reserve-card">
+          <span class="eyebrow">Reservations</span>
+          <h2>Reserve a Table</h2>
+
+          <form id="reserve-form" method="post" novalidate>
+            <div class="form-grid">
+
+              <div class="form-field full">
+                <label for="res-name">Full name</label>
+                <input type="text" id="res-name" name="name" required maxlength="80" autocomplete="name">
+              </div>
+
+              <div class="form-field">
+                <label for="res-email">Email</label>
+                <input type="email" id="res-email" name="email" required maxlength="120" autocomplete="email">
+              </div>
+
+              <div class="form-field">
+                <label for="res-phone">Phone (optional)</label>
+                <input type="tel" id="res-phone" name="phone" maxlength="20" autocomplete="tel">
+              </div>
+
+              <div class="form-field">
+                <label for="res-date">Date</label>
+                <input type="date" id="res-date" name="date" required>
+              </div>
+
+              <div class="form-field">
+                <label for="res-time">Time</label>
+                <input type="time" id="res-time" name="time" required>
+              </div>
+
+              <div class="form-field full">
+                <label for="res-guests">Guests</label>
+                <select id="res-guests" name="guests" required>
+                  <option>1</option>
+                  <option selected>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7+</option>
+                </select>
+              </div>
+
+              <div class="form-field full">
+                <label for="res-notes">Special requests (optional)</label>
+                <textarea id="res-notes" name="notes" maxlength="400"></textarea>
+              </div>
+
+              <!-- Spam trap: real visitors never see or fill this -->
+              <div class="hp-field" aria-hidden="true">
+                <label for="res-website">Leave this field empty</label>
+                <input type="text" id="res-website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="form-field full">
+                <button type="submit" class="btn btn-navy">Request Reservation</button>
+              </div>
+
+            </div>
+
+            <p class="form-message" role="status" aria-live="polite"></p>
+            <p class="form-note">Demo form: nothing is sent or stored. We only use these details to confirm your table.</p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+              </svg>
+            </span>
+            <span class="logo-text">Kilele Grand</span>
+          </a>
+          <p>A full-service hotel and conference centre in Nairobi, where global standards meet a warm Kenyan welcome.</p>
+        </div>
+
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="rooms.html">Rooms &amp; Suites</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="conference.html">Conference &amp; Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>Upper Hill, Nairobi, Kenya</li>
+            <li><a href="tel:+254200000000">+254 20 000 0000</a></li>
+            <li><a href="mailto:stay@kilelegrand.example">stay@kilelegrand.example</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Hours</h4>
+          <ul>
+            <li>Reception: 24 hours</li>
+            <li>Restaurant: 6:30am - 10:30pm</li>
+            <li>Spa &amp; Pool: 7am - 9pm</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kilele Grand Hotel &amp; Conference Centre. A portfolio project.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
