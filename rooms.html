@@ -57,7 +57,154 @@
       </div>
     </section>
 
-    <!-- Room cards go here in the next step -->
+        <section class="section rooms-page">
+      <div class="container">
+
+        <div class="filter-tabs" role="group" aria-label="Filter rooms by type">
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-btn" data-filter="standard" aria-pressed="false">Standard</button>
+          <button type="button" class="filter-btn" data-filter="deluxe" aria-pressed="false">Deluxe</button>
+          <button type="button" class="filter-btn" data-filter="executive" aria-pressed="false">Executive</button>
+          <button type="button" class="filter-btn" data-filter="suite" aria-pressed="false">Suites</button>
+        </div>
+
+        <div class="rooms-grid">
+
+          <article class="room-card" data-type="standard">
+            <div class="room-image">
+              <img src="images/room-deluxe.webp" alt="Standard Room with a comfortable double bed" width="800" height="600" loading="lazy">
+              <span class="room-badge">Standard</span>
+            </div>
+            <div class="room-body">
+              <h3>Standard Room</h3>
+              <p>A quiet, practical room with everything you need for a good night's rest.</p>
+              <ul class="room-features">
+                <li>22 m&sup2;</li><li>Queen bed</li><li>Wi-Fi</li><li>Breakfast</li>
+              </ul>
+              <div class="room-footer">
+                <div class="room-price">
+                  <span class="price-label">From</span>
+                  <span class="price-amount">KES 12,500</span>
+                  <span class="price-label">per night</span>
+                </div>
+                <a href="contact.html" class="btn btn-navy">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card" data-type="deluxe">
+            <div class="room-image">
+              <img src="images/room-deluxe.webp" alt="Deluxe Room with warm lighting" width="800" height="600" loading="lazy">
+              <span class="room-badge">Deluxe</span>
+            </div>
+            <div class="room-body">
+              <h3>Contemporary Deluxe</h3>
+              <p>A calm, modern room with local craft touches and a work desk.</p>
+              <ul class="room-features">
+                <li>30 m&sup2;</li><li>King bed</li><li>Wi-Fi</li><li>Breakfast</li>
+              </ul>
+              <div class="room-footer">
+                <div class="room-price">
+                  <span class="price-label">From</span>
+                  <span class="price-amount">KES 18,900</span>
+                  <span class="price-label">per night</span>
+                </div>
+                <a href="contact.html" class="btn btn-navy">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card" data-type="deluxe">
+            <div class="room-image">
+              <img src="images/room-executive.webp" alt="Deluxe Twin Room with two beds" width="800" height="600" loading="lazy">
+              <span class="room-badge">Deluxe</span>
+            </div>
+            <div class="room-body">
+              <h3>Deluxe Twin</h3>
+              <p>Two comfortable beds, ideal for colleagues travelling together.</p>
+              <ul class="room-features">
+                <li>32 m&sup2;</li><li>Twin beds</li><li>Wi-Fi</li><li>Breakfast</li>
+              </ul>
+              <div class="room-footer">
+                <div class="room-price">
+                  <span class="price-label">From</span>
+                  <span class="price-amount">KES 19,500</span>
+                  <span class="price-label">per night</span>
+                </div>
+                <a href="contact.html" class="btn btn-navy">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card" data-type="executive">
+            <div class="room-image">
+              <img src="images/room-executive.webp" alt="Executive Room with a view of the city" width="800" height="600" loading="lazy">
+              <span class="room-badge">Executive</span>
+            </div>
+            <div class="room-body">
+              <h3>Executive Skyline Room</h3>
+              <p>Floor-to-ceiling windows with a sweeping view of the Nairobi skyline.</p>
+              <ul class="room-features">
+                <li>40 m&sup2;</li><li>King bed</li><li>Lounge access</li><li>Breakfast</li>
+              </ul>
+              <div class="room-footer">
+                <div class="room-price">
+                  <span class="price-label">From</span>
+                  <span class="price-amount">KES 22,500</span>
+                  <span class="price-label">per night</span>
+                </div>
+                <a href="contact.html" class="btn btn-navy">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card" data-type="suite">
+            <div class="room-image">
+              <img src="images/room-penthouse.webp" alt="Junior Suite with a sitting area" width="800" height="600" loading="lazy">
+              <span class="room-badge">Suite</span>
+            </div>
+            <div class="room-body">
+              <h3>Junior Suite</h3>
+              <p>A separate sitting area and extra space to stretch out.</p>
+              <ul class="room-features">
+                <li>55 m&sup2;</li><li>King bed</li><li>Lounge</li><li>Breakfast</li>
+              </ul>
+              <div class="room-footer">
+                <div class="room-price">
+                  <span class="price-label">From</span>
+                  <span class="price-amount">KES 35,000</span>
+                  <span class="price-label">per night</span>
+                </div>
+                <a href="contact.html" class="btn btn-navy">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card" data-type="suite">
+            <div class="room-image">
+              <img src="images/room-penthouse.webp" alt="The Kilele Penthouse with a private terrace" width="800" height="600" loading="lazy">
+              <span class="room-badge">Suite</span>
+            </div>
+            <div class="room-body">
+              <h3>The Kilele Penthouse</h3>
+              <p>Our highest point, with a private terrace and 360-degree city views.</p>
+              <ul class="room-features">
+                <li>120 m&sup2;</li><li>King bed</li><li>Terrace</li><li>Butler</li>
+              </ul>
+              <div class="room-footer">
+                <div class="room-price">
+                  <span class="price-label">From</span>
+                  <span class="price-amount">KES 75,000</span>
+                  <span class="price-label">per night</span>
+                </div>
+                <a href="contact.html" class="btn btn-navy">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
 
   </main>
 

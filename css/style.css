@@ -924,3 +924,54 @@ select:focus-visible {
   color: rgba(255, 255, 255, 0.75);
   font-size: 18px;
 }
+
+/* ===== 19. ROOMS PAGE ===== */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.filter-btn {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 10px 24px;
+  border-radius: 50px;
+  border: 2px solid var(--navy);
+  background-color: transparent;
+  color: var(--navy);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.room-features {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.room-features li {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+  background-color: var(--cream);
+  color: var(--charcoal);
+}
+
+.room-card[hidden] {
+  display: none;
+}
