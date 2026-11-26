@@ -79,3 +79,35 @@ if (reserveForm) {
     reserveForm.reset();
   });
 }
+
+// ===== QUOTE FORM =====
+const quoteForm = document.querySelector('#quote-form');
+
+if (quoteForm) {
+  const quoteDate = quoteForm.querySelector('#q-date');
+  const quoteMessage = quoteForm.querySelector('.form-message');
+
+  // Stop people picking a date in the past
+  const today = new Date();
+  const m = String(today.getMonth() + 1).padStart(2, '0');
+  const d = String(today.getDate()).padStart(2, '0');
+  quoteDate.min = `${today.getFullYear()}-${m}-${d}`;
+
+  quoteForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    // Spam trap: bots fill hidden fields, people don't
+    if (quoteForm.elements.website.value !== '') {
+      return;
+    }
+
+    if (!quoteForm.checkValidity()) {
+      quoteForm.reportValidity();
+      return;
+    }
+
+    // textContent is safe: it shows text, never runs it as HTML
+    quoteMessage.textContent = 'Thank you! This is a demo, so nothing was sent.';
+    quoteForm.reset();
+  });
+}
