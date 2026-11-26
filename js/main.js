@@ -111,3 +111,49 @@ if (quoteForm) {
     quoteForm.reset();
   });
 }
+
+// ===== GALLERY FILTER + LIGHTBOX =====
+const galleryFilters = document.querySelectorAll('.gallery-filter');
+const galleryItems = document.querySelectorAll('.gallery-item');
+const lightbox = document.querySelector('#lightbox');
+
+if (lightbox) {
+  const lightboxImg = lightbox.querySelector('#lightbox-img');
+  const lightboxCaption = lightbox.querySelector('#lightbox-caption');
+  const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+  galleryFilters.forEach((button) => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+
+      galleryFilters.forEach((b) => {
+        const isActive = b === button;
+        b.classList.toggle('active', isActive);
+        b.setAttribute('aria-pressed', isActive);
+      });
+
+      galleryItems.forEach((item) => {
+        item.hidden = !(filter === 'all' || item.dataset.category === filter);
+      });
+    });
+  });
+
+  galleryItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      const photo = item.querySelector('img');
+      lightboxImg.src = photo.getAttribute('src');
+      lightboxImg.alt = photo.alt;
+      lightboxCaption.textContent = photo.alt;
+      lightbox.showModal();
+    });
+  });
+
+  lightboxClose.addEventListener('click', () => lightbox.close());
+
+  // Clicking the dark area outside the photo also closes it
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+      lightbox.close();
+    }
+  });
+}
