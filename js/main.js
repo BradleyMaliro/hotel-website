@@ -157,3 +157,28 @@ if (lightbox) {
     }
   });
 }
+
+// ===== CONTACT FORM =====
+const contactForm = document.querySelector('#contact-form');
+
+if (contactForm) {
+  const contactMessage = contactForm.querySelector('.form-message');
+
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    // Spam trap: bots fill hidden fields, people don't
+    if (contactForm.elements.website.value !== '') {
+      return;
+    }
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    // textContent is safe: it shows text, never runs it as HTML
+    contactMessage.textContent = 'Thank you! This is a demo, so nothing was sent.';
+    contactForm.reset();
+  });
+}
