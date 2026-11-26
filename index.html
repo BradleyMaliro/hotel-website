@@ -61,6 +61,38 @@
           <a href="rooms.html" class="btn btn-outline">Explore Rooms</a>
         </div>
       </div>
+            <!-- Booking bar -->
+      <form class="booking-bar container" action="rooms.html">
+        <div class="booking-field">
+          <label for="checkin">Check In</label>
+          <input type="date" id="checkin" name="checkin" required>
+        </div>
+        <div class="booking-field">
+          <label for="checkout">Check Out</label>
+          <input type="date" id="checkout" name="checkout" required>
+        </div>
+        <div class="booking-field">
+          <label for="guests">Guests</label>
+          <select id="guests" name="guests">
+            <option>1 Guest</option>
+            <option selected>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5+ Guests</option>
+          </select>
+        </div>
+        <div class="booking-field">
+          <label for="roomtype">Room Type</label>
+          <select id="roomtype" name="roomtype">
+            <option>Any Room</option>
+            <option>Standard</option>
+            <option>Deluxe</option>
+            <option>Executive</option>
+            <option>Suite</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-navy">Check Availability</button>
+      </form>
     </section>
 
   </main>
